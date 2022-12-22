@@ -1,0 +1,126 @@
+body, h1, h2 {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.6em 0;
+    background-color: rgb(190, 61, 61);
+    gap: 60%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+button {
+    font-size: 1em;
+    color: #fff;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+button#active {
+    border-bottom: 1px solid #fff;
+}
+
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+#content > div {
+    background-color: rgba(000, 000, 000, 0.5);
+    margin: 2em 0;
+    padding: 1em;
+    width: 800px;
+    border-radius: 20px;
+}
+
+#home > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: auto;
+    border-radius: 20%;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+#contact span{
+    font-size: 1.5em;
+}
+
+#contact-info {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-info > div img {
+    width: 1.7em;
+}
+
+#info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#map {
+    width: 400px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#menu > h2 {
+    align-self: center;
+}
+
+#card-container {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card > img {
+    width: 200px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.4em 0;
+    background-color: rgb(190, 61, 61);
+}
