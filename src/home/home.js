@@ -1,30 +1,7 @@
 import giacomo from '../../src/home/imgs/Giacomo-400px.jpg';
 
-export default function displayHome() {
+export default function loadHome() {
     const content = document.getElementById('content');
-    // Header
-    const header = document.createElement('header');
-    const logo = document.createElement('h1');
-    const nav = document.createElement('nav');
-    const homeBtn = document.createElement('button');
-    const menuBtn = document.createElement('button');
-    const contactBtn = document.createElement('button');
-
-    logo.innerHTML = 'Pizzeria';
-    homeBtn.innerHTML = 'Home';
-    menuBtn.innerHTML = 'Menu';
-    contactBtn.innerHTML = 'Contact';
-
-    homeBtn.classList.add('active');
-
-    nav.appendChild(homeBtn);
-    nav.appendChild(menuBtn);
-    nav.appendChild(contactBtn);
-
-    header.appendChild(logo);
-    header.appendChild(nav);
-
-    content.appendChild(header);
 
     // Menu
     const container = document.createElement('div');
@@ -57,14 +34,4 @@ export default function displayHome() {
     container.appendChild(textContainer);
     container.appendChild(picture);
     content.appendChild(container);
-
-    // Footer
-
-    const footer = document.createElement('footer');
-    const footerLogo = document.createElement('h2');
-    
-    footerLogo.innerHTML = 'Pizzeria';
-
-    footer.appendChild(footerLogo);
-    content.appendChild(footer);
 }
