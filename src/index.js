@@ -1,5 +1,6 @@
 import loadHome from './home/home';
 import loadContact from './contact/contact';
+import loadMenu from './menu/menu';
 
 const content = document.getElementById('content');
 
@@ -53,6 +54,16 @@ function displayHeader(active) {
         clearDisplay();
         displayContact();
     })
+
+    menuBtn.addEventListener('click', ()=>{
+        clearDisplay();
+        displayMenu();
+    })
+
+    logo.addEventListener('click', ()=>{
+        clearDisplay();
+        displayHome();
+    })
 }
 
 function displayFooter() {
@@ -77,5 +88,10 @@ function displayContact() {
     displayFooter();
 }
 
+function displayMenu() {
+    displayHeader('menu');
+    loadMenu();
+    displayFooter();
+}
 
 displayHome();

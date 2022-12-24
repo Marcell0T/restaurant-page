@@ -19,12 +19,15 @@ nav {
     gap: 0.5em;
 }
 
+h1, button {
+    cursor: pointer;
+}
+
 button {
     font-size: 1em;
     color: #fff;
     background: none;
     border: 0;
-    cursor: pointer;
 }
 
 button.active {

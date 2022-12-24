@@ -36,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home/home */ \"./src/home/home.js\");\n/* harmony import */ var _contact_contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact/contact */ \"./src/contact/contact.js\");\n\n\n\nconst content = document.getElementById('content');\n\n// displayContact();\nfunction clearDisplay() {\n    while(content.firstChild) {\n        content.removeChild(content.firstChild);\n    }\n}\n\nfunction displayHeader(active) {\n    const header = document.createElement('header');\n    const logo = document.createElement('h1');\n    const nav = document.createElement('nav');\n    const homeBtn = document.createElement('button');\n    const menuBtn = document.createElement('button');\n    const contactBtn = document.createElement('button');\n\n    logo.innerHTML = 'Pizzeria';\n    homeBtn.innerHTML = 'Home';\n    menuBtn.innerHTML = 'Menu';\n    contactBtn.innerHTML = 'Contact';\n\n    if(active === 'home') {\n        homeBtn.classList.add('active');\n    } else if(active === 'menu') {\n        menuBtn.classList.add('active');\n    } else if(active === 'contact') {\n        contactBtn.classList.add('active');\n    }\n\n    homeBtn.setAttribute('id', 'home-btn');\n    menuBtn.setAttribute('id', 'menu-btn');\n    contactBtn.setAttribute('id', 'contact-btn');\n\n    nav.appendChild(homeBtn);\n    nav.appendChild(menuBtn);\n    nav.appendChild(contactBtn);\n\n    header.appendChild(logo);\n    header.appendChild(nav);\n\n    content.appendChild(header);\n\n    homeBtn.addEventListener('click', () =>{\n        clearDisplay();\n        displayHome();\n    })\n    \n    contactBtn.addEventListener('click', () =>{\n        clearDisplay();\n        displayContact();\n    })\n}\n\nfunction displayFooter() {\n    const footer = document.createElement('footer');\n    const footerLogo = document.createElement('h2');\n    \n    footerLogo.innerHTML = 'Pizzeria';\n\n    footer.appendChild(footerLogo);\n    content.appendChild(footer);\n}\n\nfunction displayHome() {\n    displayHeader('home');\n    (0,_home_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n    displayFooter();\n}\n\nfunction displayContact() {\n    displayHeader('contact');\n    (0,_contact_contact__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n    displayFooter();\n}\n\n\ndisplayHome();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home/home */ \"./src/home/home.js\");\n/* harmony import */ var _contact_contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact/contact */ \"./src/contact/contact.js\");\n/* harmony import */ var _menu_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu/menu */ \"./src/menu/menu.js\");\n\n\n\n\nconst content = document.getElementById('content');\n\n// displayContact();\nfunction clearDisplay() {\n    while(content.firstChild) {\n        content.removeChild(content.firstChild);\n    }\n}\n\nfunction displayHeader(active) {\n    const header = document.createElement('header');\n    const logo = document.createElement('h1');\n    const nav = document.createElement('nav');\n    const homeBtn = document.createElement('button');\n    const menuBtn = document.createElement('button');\n    const contactBtn = document.createElement('button');\n\n    logo.innerHTML = 'Pizzeria';\n    homeBtn.innerHTML = 'Home';\n    menuBtn.innerHTML = 'Menu';\n    contactBtn.innerHTML = 'Contact';\n\n    if(active === 'home') {\n        homeBtn.classList.add('active');\n    } else if(active === 'menu') {\n        menuBtn.classList.add('active');\n    } else if(active === 'contact') {\n        contactBtn.classList.add('active');\n    }\n\n    homeBtn.setAttribute('id', 'home-btn');\n    menuBtn.setAttribute('id', 'menu-btn');\n    contactBtn.setAttribute('id', 'contact-btn');\n\n    nav.appendChild(homeBtn);\n    nav.appendChild(menuBtn);\n    nav.appendChild(contactBtn);\n\n    header.appendChild(logo);\n    header.appendChild(nav);\n\n    content.appendChild(header);\n\n    homeBtn.addEventListener('click', () =>{\n        clearDisplay();\n        displayHome();\n    })\n    \n    contactBtn.addEventListener('click', () =>{\n        clearDisplay();\n        displayContact();\n    })\n\n    menuBtn.addEventListener('click', ()=>{\n        clearDisplay();\n        displayMenu();\n    })\n\n    logo.addEventListener('click', ()=>{\n        clearDisplay();\n        displayHome();\n    })\n}\n\nfunction displayFooter() {\n    const footer = document.createElement('footer');\n    const footerLogo = document.createElement('h2');\n    \n    footerLogo.innerHTML = 'Pizzeria';\n\n    footer.appendChild(footerLogo);\n    content.appendChild(footer);\n}\n\nfunction displayHome() {\n    displayHeader('home');\n    (0,_home_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n    displayFooter();\n}\n\nfunction displayContact() {\n    displayHeader('contact');\n    (0,_contact_contact__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n    displayFooter();\n}\n\nfunction displayMenu() {\n    displayHeader('menu');\n    (0,_menu_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n    displayFooter();\n}\n\ndisplayHome();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu/menu.js":
+/*!**************************!*\
+  !*** ./src/menu/menu.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n/* harmony import */ var _img_pepperoni_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/pepperoni.png */ \"./src/menu/img/pepperoni.png\");\n/* harmony import */ var _img_capricciosa_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/capricciosa.png */ \"./src/menu/img/capricciosa.png\");\n/* harmony import */ var _img_Cheese_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/Cheese.png */ \"./src/menu/img/Cheese.png\");\n/* harmony import */ var _img_Veggie_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/Veggie.png */ \"./src/menu/img/Veggie.png\");\n\n\n\n\n\nfunction loadMenu() {\n    const content = document.getElementById('content');\n\n    const menu = document.createElement('div');\n    const h2 = document.createElement('h2');\n    const cardContainer = document.createElement('div');\n    \n    const cardPepperoni = document.createElement('div');\n    const pepperoni = new Image();\n    const h3Pepperoni = document.createElement('h3');\n\n    const cardCapricciosa = document.createElement('div');\n    const capricciosa = new Image();\n    const h3Capricciosa = document.createElement('h3');\n\n    const cardCheese = document.createElement('div');\n    const cheese = new Image();\n    const h3Cheese = document.createElement('h3');\n\n    const cardVeggie = document.createElement('div');\n    const veggie = new Image();\n    const h3Veggie = document.createElement('h3');\n\n    pepperoni.src = _img_pepperoni_png__WEBPACK_IMPORTED_MODULE_0__;\n    capricciosa.src = _img_capricciosa_png__WEBPACK_IMPORTED_MODULE_1__;\n    cheese.src = _img_Cheese_png__WEBPACK_IMPORTED_MODULE_2__;\n    veggie.src = _img_Veggie_png__WEBPACK_IMPORTED_MODULE_3__;\n\n    h2.innerHTML = 'Menu';\n\n    h3Pepperoni.innerHTML = 'Pepperoni';\n    h3Capricciosa.innerHTML = 'Capricciosa';\n    h3Cheese.innerHTML = 'Cheese';\n    h3Veggie.innerHTML = 'Veggie';\n\n    menu.setAttribute('id', 'menu');\n    cardContainer.setAttribute('id', 'card-container');\n    \n    cardPepperoni.classList.add('card');\n    cardCapricciosa.classList.add('card');\n    cardCheese.classList.add('card');\n    cardVeggie.classList.add('card');\n\n    cardPepperoni.appendChild(pepperoni);\n    cardPepperoni.appendChild(h3Pepperoni);\n\n    cardCapricciosa.appendChild(capricciosa);\n    cardCapricciosa.appendChild(h3Capricciosa);\n\n    cardCheese.appendChild(cheese);\n    cardCheese.appendChild(h3Cheese);\n\n    cardVeggie.appendChild(veggie);\n    cardVeggie.appendChild(h3Veggie);\n\n    cardContainer.appendChild(cardPepperoni);\n    cardContainer.appendChild(cardCapricciosa);\n    cardContainer.appendChild(cardCheese);\n    cardContainer.appendChild(cardVeggie);\n\n    menu.appendChild(h2);\n    menu.appendChild(cardContainer);\n    \n    content.appendChild(menu);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu/menu.js?");
 
 /***/ }),
 
@@ -87,6 +97,46 @@ eval("module.exports = __webpack_require__.p + \"ec5271f6c60cd82151ec.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"e4442cec774f0afaeea3.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/home/imgs/Giacomo-400px.jpg?");
+
+/***/ }),
+
+/***/ "./src/menu/img/Cheese.png":
+/*!*********************************!*\
+  !*** ./src/menu/img/Cheese.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"5545880460c9c9b8bafa.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/menu/img/Cheese.png?");
+
+/***/ }),
+
+/***/ "./src/menu/img/Veggie.png":
+/*!*********************************!*\
+  !*** ./src/menu/img/Veggie.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"cc7ceb849dddb0b3a846.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/menu/img/Veggie.png?");
+
+/***/ }),
+
+/***/ "./src/menu/img/capricciosa.png":
+/*!**************************************!*\
+  !*** ./src/menu/img/capricciosa.png ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"cf5e86c52b7684d32861.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/menu/img/capricciosa.png?");
+
+/***/ }),
+
+/***/ "./src/menu/img/pepperoni.png":
+/*!************************************!*\
+  !*** ./src/menu/img/pepperoni.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c92032c57281339a7b60.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/menu/img/pepperoni.png?");
 
 /***/ })
 
